@@ -4,6 +4,7 @@ html {
 
 body {
   margin: 0;
+
 }
 
 * {
@@ -12,3 +13,42 @@ body {
 
 @import "_header.scss";
 @import "_catalog.scss";
+
+.catalog {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 48px;
+  justify-content: center;
+  align-content: left;
+
+
+
+
+
+
+  &__card {
+    display: inherit;
+
+  }
+
+}
+@media screen and (min-width: 768px ) and (max-width: 1023px) {
+  .catalog {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr ;
+  }
+
+}
+@media screen and (min-width: 488px ) and (max-width: 768px) {
+  .catalog {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+}
+@media screen and (min-width: 0px ) and (max-width: 488px) {
+  .catalog {
+    grid-template-columns: auto ;
+    grid-template-rows: auto;
+  }
+}
